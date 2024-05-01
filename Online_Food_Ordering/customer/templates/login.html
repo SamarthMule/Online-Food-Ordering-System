@@ -8,9 +8,74 @@
         {% load bootstrap5 %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 10px
+            }
+            h2 {
+                width: 100%;
+                background-color: #f44336;
+                border-radius: 25px;
+                text-align: center;
+                padding: 5px 0px;
+                margin-top: 10px;
+            }
+            .login_form {
+                margin: auto auto;
+                width: 500px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+                margin-top: 10%;
+                background-color: #fff;
+            }
+            .login_form div {
+                margin: 10px 0;
+            }
+            .login_form label {
+                margin: 5px;
+                display: block;
+            }
+            .login_form input[type="text"], .login_form input[type="password"], .login_form input[type="email"],
+            .login_form select{
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 5px 0px 5px 15px;
+            }
+            .login_form option{
+                width: 100%;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                padding: 5px 5px;
+            }
+            .login_form select:focus {
+                outline: none;
+                border-color: #f44336;
+            }
+
+            .login_form input[type="submit"] {
+                padding: 5px 0px;
+                width: 100%;
+                background-color: #f44336 ;
+                font-size: 20px;
+                font-weight: bold;
+                border: 1px solid #333;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            .login_form input[type="submit"]:hover {
+                background-color: #f99900;
+            }
+        </style>
     </head>
     <body>
         <form method="POST" class='login_form'>
+            <h2>User Login</h2>
+            {% csrf_token %}
         <div>
             <label for="role">Select Role:</label>
             <select name="role" id="role">
@@ -34,3 +99,41 @@
         </form>
     </body>
 </html>
+{% comment %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <form method="POST" class="login_form container mt-5">
+        <h2 class="bg-danger text-white p-2 rounded text-center">Login</h2>
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="role" class="form-label">Select Role:</label>
+            <select class="form-select" name="role" id="role">
+                <option value="admin">Admin</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="delivery">Delivery</option>
+                <option value="customer">Customer</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" name="password" id="password" required>
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="btn  btn-danger btn-lg btn-block" value="Login">
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> {% endcomment %}
