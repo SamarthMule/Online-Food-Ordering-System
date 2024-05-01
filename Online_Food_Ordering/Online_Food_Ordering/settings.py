@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Onlie_Food_Ordering.urls'
+ROOT_URLCONF = 'Online_Food_Ordering.urls'
 
 TEMPLATES = [
     {
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Onlie_Food_Ordering.wsgi.application'
+WSGI_APPLICATION = 'Online_Food_Ordering.wsgi.application'
 
 
 # Database
