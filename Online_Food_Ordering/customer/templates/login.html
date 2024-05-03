@@ -12,15 +12,14 @@
             body {
                 font-family: Arial, sans-serif;
                 background-color: #f4f4f4;
-                padding: 10px
+                padding: 10px;
             }
-            h2 {
+            h2{
                 width: 100%;
-                background-color: #f44336;
-                border-radius: 25px;
                 text-align: center;
                 padding: 5px 0px;
-                margin-top: 10px;
+                margin-top: 20px;
+                font-weight: bold;
             }
             .login_form {
                 margin: auto auto;
@@ -45,6 +44,11 @@
                 border: 1px solid #ccc;
                 border-radius: 5px;
                 padding: 5px 0px 5px 15px;
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                box-sizing: border-box;
+                font-size: 16px;
             }
             .login_form option{
                 width: 100%;
@@ -66,9 +70,14 @@
                 border: 1px solid #333;
                 border-radius: 20px;
                 cursor: pointer;
+                background-color: #4caf50;
+                color: #fff;
+                padding: 15px 20px;
+                cursor: pointer;
+                transition: background-color 0.3s;
             }
             .login_form input[type="submit"]:hover {
-                background-color: #f99900;
+                background-color: #45a049;
             }
         </style>
     </head>
@@ -87,7 +96,6 @@
         <div>
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required>
-            
         </div>
         <div>
             <label for="password">Password:</label>
