@@ -1,0 +1,15 @@
+{% extends 'orders/header.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Leave a Review</h2>
+    <form method="POST" action=" ">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock %}

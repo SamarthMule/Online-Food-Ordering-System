@@ -1,0 +1,58 @@
+{% extends 'orders/header.html' %}
+{% load custom_tags %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      {% if user.is_superuser %}
+        <h2>(Click on the orders (red) to mark it as delivered)</h2>
+      {% else %}
+        <h2> Orders by: {{user.get_username}} </h2>
+      {% endif %}
+    </div>
+
+
+
+    <div class="col-md-12 mt-3">
+      <table class="table">
+          <thead class="thead-light">
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Ordered by</th>
+            <th scope="col">Date</th>
+            <th scope="col">Order</th>
+            <th scope="col">Amount Paid</th>
+          </tr>
+          </thead>
+          <tbody id="orders_table">
+            {% for row in rows %}
+            {% if row.delivered %}
+              <tr class="table-success">
+            {% else %}
+              <tr class="table-danger mark-as-complete">
+            {% endif %}
+                <td>{{row.id}}</td>
+                <td>{{row.username}}</td>
+                <td>{{row.time_of_order}}</td>
+                <td >
+                  <ul>
+                    {% for item in row.order|format_cart %}
+                      <li>{{item|format_cart_item}}</li>
+                    {% endfor %}
+                  </ul>
+                </td>
+                <td>£{{row.price}}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+{% endblock %}
