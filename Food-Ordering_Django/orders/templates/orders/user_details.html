@@ -13,8 +13,6 @@
         <p><strong>Last Name:</strong> <span id="lastName">lastName</span></p>
         <p><strong>Address:</strong> <span id="address">123 Main Street </span></p>
         <p><strong>Phone Number:</strong> <span id="phone">555-123-4567</span></p>
-        <p id="vehicle" style="display: none"><strong>Vehicle Name:</strong> <span id="vehicleName"></span></p>
-        <p id="plat" style="display: none"><strong>Plate Number:</strong> <span id="plateNumber"></span></p>
     </div>
     <div class="text-center mt-4">
         <button type="button" class="btn btn-primary" id="editProfileBtn" data-bs-toggle="modal" data-bs-target="#editProfileModal">Edit Profile</button>
@@ -63,72 +61,15 @@
   </div>
 </div>
 
-<!-- The modal for delivery person -->
-<div class="modal fade" id="editDeliveryPerson" tabindex="-1" aria-labelledby="editDeliveryPerson" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="editDeliveryPerson">Delivery Persons</h5>
-            <button type="button" class="btn-close-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="profileFormModalfordeliveryperson">
-            <div class="modal-body">
-                    <div class="mb-3">
-                            <label for="newEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="new_Email" name="newEmail" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newFirstName" class="form-label">First Name</label>
-                            <input type="text" class="form-control" id="new_FirstName" name="newFirstName" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newLastName" class="form-label">Last Name</label>
-                            <input type="text" class="form-control" id="new_LastName" name="newLastName" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newAddress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="new_Address" name="newAddress" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newPhone" class="form-label">Phone Number</label>
-                            <input type="text" class="form-control" id="new_Phone" name="newPhone" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newVehicleName" class="form-label">Vehicle Name</label>
-                            <input type="text" class="form-control" id="new_VehicleName" name="newVehicleName" required>
-                    </div>
-                    <div class="mb-3">
-                            <label for="newPlateNumber" class="form-label">Plate Number</label>
-                            <input type="text" class="form-control" id="new_PlateNumber" name="newPlateNumber" required>
-                    </div>
-            </div>
-            <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save</button>
-            </div>
-        </form>
-    </div>
-</div>
-</div>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var modal = document.getElementById("editProfileModal");
         var btn = document.getElementById("editProfileBtn");
         var span = document.querySelector(".btn-close");
 
-        var modal1 = document.getElementById("editDeliveryPerson");
-        var btn1 = document.getElementById("DeliveryPersons");
-        var span1 = document.querySelector(".btn-close-2");
-
         btn.addEventListener("click", function() {
             modal.classList.add("show");
             modal.style.display = "block";
-        });
-
-        btn1.addEventListener("click", function() {
-            modal1.classList.add("show");
-            modal1.style.display = "block";
         });
 
         span.addEventListener("click", function() {
@@ -136,22 +77,10 @@
             modal.style.display = "none";
         });
 
-        span1.addEventListener("click", function() {
-            modal1.classList.remove("show");
-            modal1.style.display = "none";
-        });
-
         window.addEventListener("click", function(event) {
             if (event.target === modal) {
                 modal.classList.remove("show");
                 modal.style.display = "none";
-            }
-        });
-
-        window.addEventListener("click", function(event) {
-            if (event.target === modal1) {
-                modal1.classList.remove("show");
-                modal1.style.display = "none";
             }
         });
 
@@ -174,34 +103,6 @@
             modal.classList.remove("show");
             modal.style.display = "none";
         });
-
-        document.getElementById("profileFormModalfordeliveryperson").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var newEmail = document.getElementById("new_Email").value;
-            var newFirstName = document.getElementById("new_FirstName").value;
-            var newLastName = document.getElementById("new_LastName").value;
-            var newAddress = document.getElementById("new_Address").value;
-            var newPhone = document.getElementById("new_Phone").value;
-            var newVehicleName = document.getElementById("new_VehicleName").value;
-            var newPlateNumber = document.getElementById("new_PlateNumber").value;
-
-            // Update profile information (you can send an AJAX request here to update the backend)
-            document.getElementById("email").innerText = newEmail;
-            document.getElementById("firstName").innerText = newFirstName;
-            document.getElementById("lastName").innerText = newLastName;
-            document.getElementById("address").innerText = newAddress;
-            document.getElementById("phone").innerText = newPhone;
-            document.getElementById("vehicle").style.display = "block";
-            document.getElementById("plat").style.display = "block";
-            document.getElementById("vehicleName").innerText = newVehicleName;
-            document.getElementById("plateNumber").innerText = newPlateNumber;
-
-            // Close the modal
-            modal1.classList.remove("show");
-            modal1.style.display = "none";
-        });
-
-
 
     });
 </script>

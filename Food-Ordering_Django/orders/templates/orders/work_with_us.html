@@ -1,0 +1,82 @@
+{% extends 'orders/header.html' %} {% block content %}
+<div class="container align-content-center align-center align-self-center">
+  <form id="form" >
+    <h1>Work with us</h1>
+    <p>
+      Do you want to Work with us? Please fill the form below and we will get
+      back to you.
+    </p>
+    <div class="mb-3">
+      <label for="newEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="new_Email" name="newEmail" required/>
+    </div>
+    <div class="mb-3">
+      <label for="newFirstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="new_FirstName" name="newFirstName" required />
+    </div>
+    <div class="mb-3">
+      <label for="newLastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="new_LastName" name="newLastName" required />
+    </div>
+    <div class="mb-3">
+      <label for="newAddress" class="form-label">Address</label>
+      <input type="text" class="form-control" id="new_Address" name="newAddress" required />
+    </div>
+    <div class="mb-3">
+      <label for="newPhone" class="form-label">Phone Number</label>
+      <input type="text" class="form-control" id="new_Phone" name="newPhone" required />
+    </div>
+    <div class="mb-3">
+      <label for="newVehicleName" class="form-label">Vehicle Name</label>
+      <input type="text" class="form-control" id="new_VehicleName" name="newVehicleName" required />
+    </div>
+    <div class="mb-3">
+      <label for="newPlateNumber" class="form-label">Plate Number</label>
+      <input type="text" class="form-control" id="new_PlateNumber" name="newPlateNumber" required />
+    </div>
+    <button onclick="handleSubmit()" class="btn btn-primary">Save</button>
+  </form>
+  <div id="info" style="display: none">
+    <h1 class="text-center">User Profile</h1>
+    <div class="profile-info mt-4">
+      <p>
+        <strong>Email:</strong> <span id="email">youremail@example.com</span>
+      </p>
+      <p><strong>First Name:</strong> <span id="firstName">firstName</span></p>
+      <p><strong>Last Name:</strong> <span id="lastName">lastName</span></p>
+      <p>
+        <strong>Address:</strong> <span id="address">123 Main Street </span>
+      </p>
+      <p><strong>Phone Number:</strong> <span id="phone">555-123-4567</span></p>
+      <p><strong>Vehicle Name:</strong> <span id="vehicleName">Sample</span></p>
+      <p>
+        <strong>Plate Number:</strong> <span id="plateNumber">MH131234</span>
+      </p>
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+  function handleSumit() {
+    var newEmail = document.getElementById("new_Email").value;
+    var newFirstName = document.getElementById("new_FirstName").value;
+    var newLastName = document.getElementById("new_LastName").value;
+    var newAddress = document.getElementById("new_Address").value;
+    var newPhone = document.getElementById("new_Phone").value;
+    var newVehicleName = document.getElementById("new_VehicleName").value;
+    var newPlateNumber = document.getElementById("new_PlateNumber").value;
+
+    document.getElementById("form").style.display = "none";
+    document.getElementById("info").style.display = "block";
+
+    document.getElementById("email").innerText = newEmail;
+    document.getElementById("firstName").innerText = newFirstName;
+    document.getElementById("lastName").innerText = newLastName;
+    document.getElementById("address").innerText = newAddress;
+    document.getElementById("phone").innerText = newPhone;
+    document.getElementById("vehicleName").innerText = newVehicleName;
+    document.getElementById("plateNumber").innerText = newPlateNumber;
+  }
+});
+</script>
+{% endblock %}
