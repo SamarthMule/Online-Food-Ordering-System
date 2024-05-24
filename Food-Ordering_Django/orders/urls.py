@@ -27,5 +27,6 @@ urlpatterns = [
     path('makepayment/',views.makepayment, name='makepayment'),
     path('review/',views.review, name='review'),
     path('user_details',views.user_details, name='user_details'),
-    path('work_with_us/',views.work_with_us, name='work_with_us')
+    path('work_with_us/',views.work_with_us, name='work_with_us'),
+    path('delivery_orders/',views.delivery_orders, name='delivery_orders'),
 ]

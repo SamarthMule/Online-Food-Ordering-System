@@ -193,3 +193,6 @@ def user_details(request):
 
 def work_with_us(request):
     return render(request, 'orders/work_with_us.html')
+
+def delivery_orders(request):
+    return render(request, 'orders/delivery_orders.html')
