@@ -190,3 +190,9 @@ def review(request):
 
 def user_details(request):
     return render(request, 'orders/user_details.html')
+
+def work_with_us(request):
+    return render(request, 'orders/work_with_us.html')
+
+def delivery_orders(request):
+    return render(request, 'orders/delivery_orders.html')
