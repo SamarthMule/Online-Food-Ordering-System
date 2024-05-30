@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work with Us</title>
+  {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/tray.png' %}" type="image/x-icon">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+    }
+    .profile-info {
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .profile-info p {
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      width: 100%;
+    }
+    .form-label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="btn btn-danger nav-btn ml-auto" href="/">Back</a>
+            <div class="d-flex align-items-center w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarNav">
+    
+                </div>
+                <a class="btn btn-danger nav-btn ml-auto" href="/login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+  <div class="container align-content-center align-center align-self-center">
+    <form id="form">
+      <h1 class="text-center mb-4">Work with Us</h1>
+      <p class="text-center mb-4">
+        Do you want to work with us? Please fill the form below and we will get back to you.
+      </p>
+      <div class="mb-3">
+        <label for="newEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="new_Email" name="newEmail" required/>
+      </div>
+      <div class="mb-3">
+        <label for="newFirstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="new_FirstName" name="newFirstName" required />
+      </div>
+      <div class="mb-3">
+        <label for="newLastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="new_LastName" name="newLastName" required />
+      </div>
+      <div class="mb-3">
+        <label for="newAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="new_Address" name="newAddress" required />
+      </div>
+      <div class="mb-3">
+        <label for="newPhone" class="form-label">Phone Number</label>
+        <input type="text" class="form-control" id="new_Phone" name="newPhone" required />
+      </div>
+      <div class="mb-3">
+        <label for="newVehicleName" class="form-label">Vehicle Name</label>
+        <input type="text" class="form-control" id="new_VehicleName" name="newVehicleName" required />
+      </div>
+      <div class="mb-3">
+        <label for="newPlateNumber" class="form-label">Plate Number</label>
+        <input type="text" class="form-control" id="new_PlateNumber" name="newPlateNumber" required />
+      </div>
+      <button type="button" onclick="handleSubmit()" class="btn btn-primary">Save</button>
+    </form>
+    <div id="info" style="display: none">
+      <h1 class="text-center mt-4">User Profile</h1>
+      <div class="profile-info mt-4">
+        <p><strong>Email:</strong> <span id="email">youremail@example.com</span></p>
+        <p><strong>First Name:</strong> <span id="firstName">firstName</span></p>
+        <p><strong>Last Name:</strong> <span id="lastName">lastName</span></p>
+        <p><strong>Address:</strong> <span id="address">123 Main Street</span></p>
+        <p><strong>Phone Number:</strong> <span id="phone">555-123-4567</span></p>
+        <p><strong>Vehicle Name:</strong> <span id="vehicleName">Sample</span></p>
+        <p><strong>Plate Number:</strong> <span id="plateNumber">MH131234</span></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.handleSubmit = function() {
+        var newEmail = document.getElementById("new_Email").value;
+        var newFirstName = document.getElementById("new_FirstName").value;
+        var newLastName = document.getElementById("new_LastName").value;
+        var newAddress = document.getElementById("new_Address").value;
+        var newPhone = document.getElementById("new_Phone").value;
+        var newVehicleName = document.getElementById("new_VehicleName").value;
+        var newPlateNumber = document.getElementById("new_PlateNumber").value;
+
+        document.getElementById("form").style.display = "none";
+        document.getElementById("info").style.display = "block";
+
+        document.getElementById("email").innerText = newEmail;
+        document.getElementById("firstName").innerText = newFirstName;
+        document.getElementById("lastName").innerText = newLastName;
+        document.getElementById("address").innerText = newAddress;
+        document.getElementById("phone").innerText = newPhone;
+        document.getElementById("vehicleName").innerText = newVehicleName;
+        document.getElementById("plateNumber").innerText = newPlateNumber;
+      };
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
