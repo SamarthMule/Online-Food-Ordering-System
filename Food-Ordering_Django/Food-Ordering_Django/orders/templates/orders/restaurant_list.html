@@ -1,0 +1,274 @@
+{% extends 'orders/header.html' %}
+
+{% block content %}
+    <h1>Restaurant List</h1>
+    <ul>
+        <!-- First Restaurant -->
+        <li>
+            <h2>Restaurant 1</h2>
+            <p><strong>Address:</strong> Address 1</p>
+            <p><strong>Menu:</strong></p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/t6fa8UxowuA7s6b02dz-l74jvboboSe3rJ7EsRVJ7kk/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NTU5NDkyNTgtZWI2/N2IxZWYwY2ViP3E9/ODAmdz0xMDAwJmF1/dG89Zm9ybWF0JmZp/dD1jcm9wJml4bGli/PXJiLTQuMC4zJml4/aWQ9TTN3eE1qQTNm/REI4TUh4elpXRnlZ/Mmg4TVRKOGZIQmhj/M1JoZkdWdWZEQjhm/REI4Zkh3dw" alt="Momos" class="menu-item-image">
+                    <p>Pasta</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/bm9Cram3YNbETn06YLG5zrkpwyI-3mR2xodoXTeV2t0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI5/Nzc4ODk5OS9waG90/by90cmFkaXRpb25h/bC1pbmRpYW4taG9t/ZW1hZGUtZWdnLWJp/cnlhbmkuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPXJOVGRK/Zk9FREpCbFh5V21j/ZUlvd3M4M1lpamxR/N2EyZzZsejM2dnhO/RWc9" alt="Noodles" class="menu-item-image">
+                    <p>egg Biriyani</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/gootTTqvnT6joFfHF4bU-CrZvB3wXoGVqj8TTZCKKcA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9pbmRp/YW4tc3R5bGUtcG9y/cmlkZ2Utd2hlYXQt/bGVudGlscy1oZWFs/dGh5LWRhbGl5YS1r/aGljaGRpLXJlY2lw/ZS1tb29uZy1kYWwt/a2hpY2hkaS1kYWxp/eWEta2hpY2hkaS0y/MTU0Nzk2OTMuanBn" alt="Biriyani" class="menu-item-image">
+                    <p>Dal khichdi</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/lJVR-0-k2yyBpiDVfKUyOrSzYdFSAIyNpTbAatKn4hQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI2/MjgxNTU2My9waG90/by9pbmRpYW4tZm9v/ZC1iYWNrZ3JvdW5k/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0zVXgtNEg4c1pu/ZHhIQmVmem0xY3p0/emNrdkFuRDlYOEFL/c0VIaERDMEl3PQ" alt="Fried Rice" class="menu-item-image">
+                    <p>Mix cary</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <!-- Add more menu items as needed -->
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- Second Restaurant -->
+        <li>
+            <h2>Restaurant 2</h2>
+            <p><strong>Address:</strong> Address 2</p>
+            <p><strong>Menu:</strong></p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/yGm97GZHddKH76B1-ImqgkkZk7PmsqFNu4EtgpdEgxY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM2/MDY1NTI0Ny9waG90/by90cmFkaXRpb25h/bC1zb3V0aC1pbmRp/YW4tbWVhbC1zZXJ2/ZWQtaW4tYmFuYW5h/LWxlYWYuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPUNwRWdk/MHgxNFpFQXRUemZq/QXc3bEtTQnhPbjZu/dktPTEp1YXQ0Sk9v/dzQ9" alt="Paneer Curry" class="menu-item-image">
+                    <p>South indian meals</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/8-0JfQ_14pPQqV65NLK6AZ0R3rZFqMqumVoWQitBsac/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzU3LzIxLzQ4/LzM2MF9GXzI1NzIx/NDg0Nl9RRkwwWVRS/aUdoNGtnTEZna01s/MnBqUk9XdlU3a0ZB/MS5qcGc" alt="Chicken Curry" class="menu-item-image">
+                    <p>North indian meals</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/tmboJ3rcrtWknYIcP1VMpxJ5_TZyzH3Rn3ZTVarqBxI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wYXJh/ZGUuY29tLy5pbWFn/ZS9jX2ZpdCxjc19z/cmdiLGZsX3Byb2dy/ZXNzaXZlLGhfNDA2/LHFfYXV0bzpnb29k/LHdfNjIwL01Ua3dO/VGd3T1RZek16azFP/VGN3T1RRdy9pZGxp/LS0tc3RlYW1lZC1y/aWNlLWNha2VzLmpw/Zw" alt="Roti" class="menu-item-image">
+                    <p>Idle</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/2RQitPE8jOIcRVVQXiENbU1D3A1xiEw0WkPChcISeOY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM5/ODE0NDE4My9waG90/by9jdXJkLXNhbW9z/YS1jaGFhdC5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9UWdY/bFY3MDdDWklIWlha/bzdNMDlZdVZfQXJh/YlVSREIzaUdMNEFN/NGJsUT0" alt="Dosa" class="menu-item-image">
+                    <p>Samosa</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <!-- Add more menu items as needed -->
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- Third Restaurant -->
+        <li>
+            <h2>Restaurant 3</h2>
+            <p><strong>Address:</strong> Address 3</p>
+            <p><strong>Menu:</strong></p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/2Qmhr72FgnyuKA0kF9vVtPlO_pFWYrzKNqsWN8TrgKA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/NjgyMzY1MzQ5OTAt/NzNjNGVkMjMwNDNj/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4TVRsOGZH/NXZjblJvSlRJd2FX/NWthV0Z1SlRJd1pt/OXZaSHhsYm53d2ZI/d3dmSHg4TUE9PQ.jpeg" alt="Egg Curry" class="menu-item-image">
+                    <p>Dal Rice</p>
+                    <p><strong>Rating:</strong> 4.5/5</p>
+                    <p><strong>Price:</strong> $12</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/iUHyRoKbvY-CLj2qfWkTnlyYFWbL142SJLpp7k34Ebg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2JlLzQw/LzRlL2JlNDA0ZTRk/ZmM4NmFkZWYwZmJm/YjFlOGE5YTQwZjRi/LmpwZw" alt="Ghee Rice" class="menu-item-image">
+                    <p>panner manchurian</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://as2.ftcdn.net/v2/jpg/07/08/56/35/1000_F_708563518_nAc0kSDLXff0J8I9TxtPGP3XgzIegmos.jpg" alt="Salad" class="menu-item-image">
+                    <p>Gulab jamun</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/D4uyq7MiqQKznankfq4KzOWi7AJXUtixy9jsoqBEFY8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTY5/MDM0NjYxL3Bob3Rv/L3ZlZ2V0YWJsZS1z/b3VwLWF1LXBpc3Rv/dS5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9RFM3emNPdThr/WjB0NU4tNmZJaF9O/cmVFWUxaZXZGamNU/ZG1xZlhhMDdWQT0" alt="Soup" class="menu-item-image">
+                    <p>Soup</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <!-- Add more menu items as needed -->
+                <div class="clearfix"></div>
+            </div>
+        </li>
+
+        <!-- Additional restaurants and menu items -->
+        <li>
+            <h2>Restaurant A</h2>
+            <p><strong>Address:</strong> 123 Main Street</p>
+            <p><strong>Menu:</strong></p>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://media.gettyimages.com/id/1341503586/photo/fried-momos-dumpling.jpg?s=612x612&w=0&k=20&c=puIcxwja_Fp9g6hUu-6CowT6f22RCrpKnH30m5T8Tdo=" alt="Momos" class="menu-item-image">
+                    <p>Momos</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://media.gettyimages.com/id/1393404893/photo/teriyaki-shrimp-with-ramen-noodles.jpg?s=612x612&w=0&k=20&c=9N3HN7RRUbG5NBVLwyI3fUHByXDQVI6G3aBDUBQB-R8=" alt="Noodles" class="menu-item-image">
+                    <p>Noodles</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://media.gettyimages.com/id/1470286773/photo/indian-dish-biryani-chicken-with-basmati-rice-in-metal-brass-old-bowl.jpg?s=612x612&w=0&k=20&c=CdDBIG2u5E_uZzsh3CwswRaVb7nq--WheUfJdqfDbQo=" alt="Biriyani" class="menu-item-image">
+                    <p>Biriyani</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/ccl36EDVKxfEdj5IMeyGmfehu4YUytX73Zw-eAzxPAQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8w/Ny8xNi8xMS81Ny9m/cmllZC0yNTA5MDg5/XzY0MC5qcGc" alt="Fried Rice" class="menu-item-image">
+                    <p>Fried Rice</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/v48qS8zQwhUWkD25A4OwaD6R208sAQZwpbWYfwlJeZM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzE2LzA3LzUw/LzM2MF9GXzYxNjA3/NTA2MV9CSEhDUmZ4/SGMxQkpLaFRxV1E3/N3lnRm5wUzRmRnNP/Vi5qcGc" alt="Chicken Curry" class="menu-item-image">
+                    <p>Chicken Curry</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/KBo6W77uyNpjcmn-duldfWM2nRJv9ZRrq_JIHEKiVwg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzMxLzY1LzQ1/LzM2MF9GXzMzMTY1/NDUzOV9GYUNKSldW/VUIzU21ySVBJa21l/RU9uazdUWWdsN3hR/Qy5qcGc" alt="Paneer Curry" class="menu-item-image">
+                    <p>Paneer Curry</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/MOXZTeka3rM19MOMrFVDdCeHA9AW1WjARS6I9f6Wsu0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDMu/ZGVwb3NpdHBob3Rv/cy5jb20vNTY1MzYz/OC8xNzcxMi9pLzQ1/MC9kZXBvc2l0cGhv/dG9zXzE3NzEyOTUy/OC1zdG9jay1waG90/by1nYXJsaWMtY29y/aWFuZGVyLW5hYW4t/c2VydmVkLXBsYXRl/LmpwZw" alt="Roti" class="menu-item-image">
+                    <p>Roti</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/0ydWmE2Ng015h0Ougo_-ut_EY-quOUhk5fvxlrgk2k4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdC5k/ZXBvc2l0cGhvdG9z/LmNvbS8zMTQ3NzM3/LzUwNzcvaS80NTAv/ZGVwb3NpdHBob3Rv/c181MDc3NTQxNS1z/dG9jay1waG90by1w/bGFpbi1kb3NhLWEt/c291dGgtaW5kaWFu/LmpwZw" alt="Dosa" class="menu-item-image">
+                    <p>Dosa</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/hLayh5Q0wM0MhJCPdjOQsg4A0PMEvtAUtkB_X1GMiJc/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzQ1LzA0LzA5/LzM2MF9GXzU0NTA0/MDkyNl9GZDdUWTVr/WGNMdUJIeUpSQVhh/YWpydjk0OXFWQjNH/Qy5qcGc" alt="Egg Curry" class="menu-item-image">
+                    <p>Egg Curry</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="menu-item">
+                    <img src="https://imgs.search.brave.com/NufUn6-VxRt54p72F7AbLTP9N2CLwG84ZFPiN4PMRwI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9pbmRpYW4tZm9v/ZF8xNzAxNTMtNDku/anBnP3NpemU9NjI2/JmV4dD1qcGc" alt="Ghee Rice" class="menu-item-image">
+                    <p>Ghee Rice</p>
+                    <p><strong>Rating:</strong> 4.7/5</p>
+                    <p><strong>Price:</strong> $10</p>
+                    <button class="order-button">Order</button>
+                    <button class="cart-button"><span>&#10084;</span> Add to Cart</button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </li>
+    </ul>
+
+    <style>
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            border: 1px solid #ddd; /* Adding a border for better visibility */
+            border-radius: 8px; /* Slightly rounded corners */
+            padding: 10px; /* Padding for better spacing */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px; /* Rounded corners for images */
+        }
+
+        .order-button, .cart-button {
+            margin: 5px;
+            padding: 10px;
+            border: none;
+            background-color: #ff8c00; /* Orange color */
+            color: white;
+            cursor: pointer;
+            border-radius: 4px; /* Rounded corners for buttons */
+            font-size: 14px; /* Font size for buttons */
+        }
+
+        .order-button:hover, .cart-button:hover {
+            background-color: #ffa500; /* Lighter orange on hover */
+        }
+
+        .cart-button span {
+            font-size: 20px; /* Adjust size as needed */
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+{% endblock %}
