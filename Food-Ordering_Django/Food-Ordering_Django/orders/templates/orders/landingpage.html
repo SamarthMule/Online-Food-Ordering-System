@@ -1,0 +1,351 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food delivery</title>
+    <link rel="shortcut icon" href="{% static 'images/tray.png' %}" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/landingpagestyling.css' %}">
+
+</head>
+<style>
+    .hero-section {
+    position: relative;
+    height: 70vh;
+    background-image: url('{% static 'images/back.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0e0d0d;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #f5f5f5;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#">Restaurant Name</a>
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+            </div>
+            <a class="btn btn-danger nav-btn ml-auto" href="/login">Login</a>
+        </div>
+    </div>
+</nav>
+    
+    <section class="first-section pb-5">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome To Delicious Bites</h1>
+            <p>Serving you the most delectable dishes for your culinary delight.</p>
+        </div>
+    </div>
+    
+    </section>
+
+
+
+    <section class="first-section pb-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col text-center">
+                    <h2 class="section-title">Hungry for Excellence: Our Featured Dishes</h2>
+                </div>
+            </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/pizza.png' %}" class="card-img-top" alt="Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★☆</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Best Seller</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/burger.png' %}" class="card-img-top" alt="Burger">
+                    <div class="card-body">
+                        <h5 class="card-title">Burger</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★★</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Best Seller</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/biryani.png' %}" class="card-img-top" alt="Biryani">
+                    <div class="card-body">
+                        <h5 class="card-title">Biryani</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★★</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Top Recommended</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/pasta.png' %}" class="card-img-top" alt="Pasta">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★☆</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Best Seller</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/salad.png' %}" class="card-img-top" alt="Salad">
+                    <div class="card-body">
+                        <h5 class="card-title">Salad</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★☆</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Top Recommended</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card dish-card">
+                    <img src="{% static 'images/fries.png' %}" class="card-img-top" alt="Sushi">
+                    <div class="card-body">
+                        <h5 class="card-title">fries</h5>
+                        <p class="card-text">Rating: <span class="rating">★★★★★</span></p>
+                    </div>
+                    <span class="badge badge-custom position-absolute top-0 start-0 m-2">Top Recommended</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="bg-white py-5">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col text-center">
+                <h2 class="section-title">Our Features</h2>
+                <p class="section-subtitle">Discover the benefits of using our service</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Feature 1: Easy Ordering -->
+            <div class="col-lg-4 col-md-6 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-utensils feature-icon"></i>
+                    <h3 class="feature-title">Easy Ordering</h3>
+                    <p>Order your favorite dishes with just a few clicks.</p>
+                </div>
+            </div>
+            <!-- Feature 2: Quick Delivery -->
+            <div class="col-lg-4 col-md-6 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-shipping-fast feature-icon"></i>
+                    <h3 class="feature-title">Quick Delivery</h3>
+                    <p>Enjoy fast and reliable delivery right to your doorstep.</p>
+                </div>
+            </div>
+            <!-- Feature 3: Feedback -->
+            <div class="col-lg-4 col-md-6 text-center mb-4">
+                <div class="feature-box">
+                    <i class="fas fa-comments feature-icon"></i>
+                    <h3 class="feature-title">Feedback</h3>
+                    <p>We value your feedback to improve our service.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section id="testimonials">
+    <div class="container">
+        <div class="testimonial-heading">
+            <span>Customer Reviews</span>
+            <h4>What Our Customers Say</h4>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-box">
+                <!-- Testimonial 1 -->
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="{% static 'images/man.png' %}" alt="user icon" />
+                        </div>
+                        <div class="name-user">
+                            <strong>Aarav Patel</strong>
+                            <span>@aarav_patel</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>The food was delivered hot and fresh! The taste reminded me of home-cooked meals. Definitely ordering again!</p>
+                </div>
+            </div>
+            <div class="testimonial-box">
+                <!-- Testimonial 2 -->
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="{% static 'images/girl.png' %}" alt="user icon" />
+                        </div>
+                        <div class="name-user">
+                            <strong>Jasmine Mehta</strong>
+                            <span>@jasmine_mehta</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="client-comment">
+                    <p>Quick delivery and delicious food! However, I wish there were more vegetarian options.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <script src='https://kit.fontawesome.com/c8e4d183c2.js'></script>
+  
+
+ <!-- Footer -->
+<footer>
+    <div class="footer-main">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-widget">
+                        <h4>About Restaurant Name</h4>
+                        <p>Welcome to Restaurant Name, where we offer an exquisite dining experience with a diverse menu that caters to all tastes. Our mission is to provide high-quality food and exceptional service to our customers.</p>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Links Section -->
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link">
+                        <h4>Information</h4>
+                        <ul>
+                           
+                            <li><a href="/work_with_us">Work with us</a></li>
+                            <li><a href="/about">About Us</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="/term">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Contact Section -->
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="footer-link-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i> Address: 123 Main Street, Cityville, ABC 12345</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i> Phone: <a href="tel:+1234567890">+1 (123) 456-7890</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@restaurantname.com">info@restaurantname.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- Start Copyright -->
+<div class="footer-copyright">
+    <p class="footer-company">All Rights Reserved. &copy; 2024 <a href="#">Restaurant Name</a> Design By:
+        <a href=" ">Team 4</a></p>
+</div>
+<!-- End Copyright -->
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;">&uarr;</a>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+</body>
+
+</html>
