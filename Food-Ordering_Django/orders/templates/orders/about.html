@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/tray.png' %}" type="image/x-icon"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+
+        .about-section {
+            padding: 20px;
+        }
+
+        .about-section h2 {
+            color: #ff4500;
+        }
+
+        .about-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-section ul li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .about-section ul li i {
+            margin-right: 10px;
+            color: #ff4500;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        
+  <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="btn btn-danger nav-btn ml-auto" href="/">Back</a>
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+            </div>
+            <a class="btn btn-danger nav-btn ml-auto" href="/login">Login</a>
+        </div>
+    </div>
+</nav>
+
+    </header>
+
+    <section class="about-section">
+        <h2>Our Story</h2>
+        <p>It all started in a cozy kitchen where culinary dreams met technological innovation. Fueled by a passion for flavor and a commitment to convenience, TastyBite was born. We set out to create a platform that bridges the gap between busy lifestyles and gourmet dining experiences. From that humble beginning, we've grown into a digital culinary hub, bringing together food lovers and top-rated restaurants in one seamless online marketplace.</p>
+        <h2>Our Mission</h2>
+        <p>At TastyBite, we're on a mission to tantalize your taste buds and simplify your life. We believe that good food should be accessible to everyone, no matter where you are or how hectic your schedule may be. That's why we've curated a diverse selection of cuisines, handpicked from the finest eateries in your neighborhood and beyond.</p>
+        <h2>Why Choose TastyBite</h2>
+        <ul>
+            <li><i class="fas fa-utensils"></i> Unrivaled Variety</li>
+            <li><i class="fas fa-check-circle"></i> Seamless Ordering</li>
+            <li><i class="fas fa-leaf"></i> Quality Assurance</li>
+            <li><i class="fas fa-clock"></i> Convenience Redefined</li>
+            <li><i class="fas fa-headset"></i> Exceptional Service</li>
+        </ul>
+    </section>
+
+
+</body>
+</html>

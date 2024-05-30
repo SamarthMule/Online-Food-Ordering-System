@@ -1,0 +1,85 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{% static 'images/tray.png' %}" type="image/x-icon">
+
+    <!-- For the toasts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="{% static 'orders/main.js' %}">
+
+
+    <title>Food ordering</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="btn btn-danger nav-btn ml-auto" href="/">Back</a>
+        <div class="d-flex align-items-center w-100 justify-content-between">
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+            </div>
+            <a class="btn btn-danger nav-btn ml-auto" href="/login">Login</a>
+        </div>
+    </div>
+</nav>
+
+
+</nav>
+
+<div class="container-fluid" style="position: relative;top: 50%;transform: translateY(50%);">
+  <div class="row justify-content-center">
+    <h3><u>Contact Details</u></h3>
+  </div>
+  <div class="row justify-content-center">
+    <p>Our phone numbers are 617-617-61700 or 617-617-6176</p>
+  </div>
+  <div class="row justify-content-center">
+    <p>Our fax number is 617-617-6178</p>
+  </div>
+  <div class="row justify-content-center">
+    <p>Find us on Twitter @FoodOrderingDjango</p>
+  </div>
+  <div class="row justify-content-center">
+    <p>And Instagram @foodorderingDjango</p>
+  </div>
+  <div class="row justify-content-center">
+    <p>If you have any questions or comments or would like to get on our email list you can email us at foodorderproject@codeastro.com</p>
+  </div>
+</div>
+
+
+{% block content %}
+{% endblock %}
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="{% static 'orders/main.js' %}"></script>
+</body>
+</html>
+
+
+
+
