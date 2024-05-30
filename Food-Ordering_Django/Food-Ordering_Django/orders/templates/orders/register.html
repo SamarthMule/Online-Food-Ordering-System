@@ -1,0 +1,26 @@
+{% extends 'orders/header.html' %}
+
+
+{% block content %}
+  <div class="container">
+    <hr>
+    <div class="row">
+      <div class="col-md-2"></div>
+
+      <div class="col">
+        <form method="POST">
+          {% csrf_token %}
+          {{form.as_p}}
+    
+          <button class="btn btn-danger" type="submit">Register</button>
+        </form>
+    
+    
+      <p>If you already have an account, please <a href="/login" class="btn btn-success">LOGIN</a> instead!</p>
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+{% endblock %}
